@@ -161,7 +161,8 @@ nav{
 
 /*TEAM SECTION*/
 .team_s{
-	padding: 95px 0;
+	padding: 12px 0;
+	background-color: #2a2e48;
 	color: #6c7279;
 }
 .team_item h4{
