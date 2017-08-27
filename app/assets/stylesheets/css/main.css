@@ -51,7 +51,7 @@ body{
 
 /*HEADER*/
 header{
-	height: 300px;
+	height: 120px;
 	/*background_image: image-url('tab_bg1.jpg');*/
 	background-color: #454545; /*url('../img/tab_bg1.jpg');*/
 	/*-webkit-background-size: cover;*/
