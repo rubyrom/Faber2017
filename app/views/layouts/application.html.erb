@@ -10,9 +10,9 @@
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-      <link rel="stylesheet" href="/css/main.css" />
+    <!--  <link rel="stylesheet" href="/css/main.css" />
       <link rel="stylesheet" href="/css/media.css" />
-      <link rel="stylesheet" href="/css/fonts.css" />
+      <link rel="stylesheet" href="/css/fonts.css" />-->
 
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -29,14 +29,15 @@
               <span class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
 
-            <a href="main" class="navbar-brand logo">
-              <img src="/images/logo.png" alt="logo">
+          <!--  <a href="/main" class="navbar-brand logo" >-->
+              <%= link_to image_tag("logo.png", alt: "Logo" ), "/main" %>
+              <!--<img src="/images/logo.png" alt="logo">-->
             </a>
           </div>
 
           <div class="collapse navbar-collapse navbar-right" id="top_menu">
             <ul class="menu">
-              <li><a href="/busines">Бизнес</a></li>
+              <li><a href="/main">Главная</a></li>
               <li><a href="/happy">Удача</a></li>
               <li><a href="/about">О нас</a></li>
               <li><a href="/contacts">Контакты</a></li>
