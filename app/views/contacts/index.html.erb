@@ -1,0 +1,23 @@
+<h1>Список контактов:</h1>
+<% @contacts.each do |contact| %>
+	<h2>
+		<%= contact.name %>
+	</h2>
+  <p>
+  		<%= contact.phone %>
+  </p>
+  <p>
+  		<%= contact.email %>
+  </p>
+
+  <p>
+  		<%= contact.message %>
+  </p>
+
+	<p>
+		<%= link_to 'Show', contact_path(contact) %> |
+		<%= link_to 'Edit', edit_contact_path(contact) %> |
+		<%= link_to 'Destroy', contact_path(contact), method: :delete, data:{ confirm: "Are you sure?" } %>
+	<p/>
+	<hr />
+<% end %>
