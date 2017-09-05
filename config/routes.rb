@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'main' => 'pages#main'
   get 'about' => 'pages#about'
+  get 'our_contacts' => 'pages#our_contacts'
   get '/' => 'pages#main'
   post '/' => 'contacts#create'
 
