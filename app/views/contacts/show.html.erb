@@ -5,10 +5,11 @@
 </p>
 
 <h2>Комментарии:</h2>
-<% @contact.comments.each do |c| %>
+<% @contact.comments.each do |comment| %>
   <p>
-    <i><%= c.author %> сказал:</i><br />
-    <%= c.body %>
+    <i><%= comment.author %> сказал:</i><br />
+    <%= comment.body %>
+    <%= link_to "Delete", contact_comment_path(@contact, comment), :method => :delete, data:{ confirm: "Are you sure?" } %>
   </p>
 
 <% end %>
