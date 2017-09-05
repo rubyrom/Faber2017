@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
 
-before_action :authenticate_user!
+#before_action :authenticate_user!
 
   def new
   end
@@ -9,9 +9,11 @@ before_action :authenticate_user!
     @contact=Contact.new(contact_params)
     if @contact.valid?
       @contact.save
+      @message="Вы записаны!!!"
     else
-      render action: 'new'
+      @message="Заполните все строки формы!"
     end
+    render action: '/'
   end
 
   def index
