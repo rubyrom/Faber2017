@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'main' => 'pages#main'
   get 'about' => 'pages#about'
   get '/' => 'pages#main'

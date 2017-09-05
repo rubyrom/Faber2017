@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def create
 	  @contact=Contact.find(params[:contact_id])
     @contact.comments.create(comment_params)
