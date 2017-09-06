@@ -9,7 +9,8 @@ class CommentsController < ApplicationController
   def destroy
     @comment=Comment.find(params[:id])
     @comment.destroy
-      redirect_to contacts_path
+     @contact=Contact.find(params[:contact_id])
+    redirect_to contact_path(@contact)
   end
 
 
