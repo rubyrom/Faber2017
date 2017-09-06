@@ -16,6 +16,10 @@
   </p>
 
 	<p>
+		Всего <%= contact.comments.size %> комментариев.
+	</p>
+
+	<p>
 		<%= link_to 'Show', contact_path(contact) %> |
 		<%= link_to 'Destroy', contact_path(contact), method: :delete, data:{ confirm: "Are you sure?" } %>
 	<p/>
