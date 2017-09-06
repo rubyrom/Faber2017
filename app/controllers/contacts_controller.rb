@@ -13,7 +13,8 @@ class ContactsController < ApplicationController
     else
       @message="Заполните все строки формы!"
     end
-    render action: '/'
+  #  render action: 'about'
+
   end
 
   def index
