@@ -7,4 +7,7 @@ class PagesController < ApplicationController
 
   def our_contacts
   end
+
+  def happy
+  end
 end
