@@ -1,6 +1,8 @@
 class ContactsController < ApplicationController
 
-#before_action :authenticate_user!
+  layout "comments"
+
+before_action :authenticate_user!
 
   def new
   end
