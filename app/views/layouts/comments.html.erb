@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <title>Контакты</title>
   </head>
   <body>
-    <%= link_to image_tag("logo.png", alt: "Logo" ), "/main" %>
+
+    <%= link_to image_tag("logo.png", alt: "Logo" ), "/main" %><hr/>
+    <% if user_signed_in? %>
+      <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign In', new_user_session_path %>
+    <% end %>
+
   <%= yield %>
-  </body>
+</body>
 </html>

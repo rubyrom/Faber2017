@@ -9,7 +9,7 @@
   <p>
     <i><%= comment.author %> сказал:</i><br />
     <%= comment.body %>
-    <%= link_to "Delete", contact_comment_path(@contact, comment), :method => :delete, data:{ confirm: "Are you sure?" } %>
+    <%= link_to "Удалить", contact_comment_path(@contact, comment), :method => :delete, data:{ confirm: "Вы уверены?" } %>
   </p>
 
 <% end %>
