@@ -10,5 +10,4 @@ class ApplicationController < ActionController::Base
      #devise_parameter_sanitizer.for(:account_update) << :username
    end
 
-   def
 end
