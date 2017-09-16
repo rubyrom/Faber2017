@@ -25,7 +25,7 @@
             </button>
 
               <%= link_to image_tag("logo.png", alt: "Logo" ), "/main" %>
-              
+
           </div>
 
           <div class="collapse navbar-collapse navbar-right" id="top_menu">
@@ -108,7 +108,7 @@
     		</button>
     </footer>
 
-<div class="modal fade" id="dlModal">
+<!-- <div class="modal fade" id="dlModal1">
  <div class="modal-dialog">
    <div class="modal-content">
 
@@ -118,16 +118,77 @@
      </div>
 
      <div class="modal-body">
-       <form action="/" method="post" id="dlForm">
+       <form action="/" method="post" id="dlForm1">
          <input type="text" class="form-control" placeholder="Ваше имя" name="contact[name]">
          <input type="text" class="form-control" placeholder="Ваш телефон" name="contact[phone]">
          <input type="email" class="form-control" placeholder="Ваш E-Mail" name="contact[email]">
          <textarea class="form-control" placeholder="Сообщение" rows="3" name="contact[message]"></textarea>
-         <input type="submit" value="Отослать" class="my_btn btn_md btn-block">
+         <input id="save" type="submit" value="Отослать" class="my_btn btn_md btn-block">
        </form>
      </div>
    </div>
  </div>
+</div> -->
+
+<!-- Модальное окно -->
+<div class="modal fade" id="dlModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Заголовок модального окна -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title" id="myModalLabel">Ваши личные данные</h4>
+      </div>
+      <!-- Основная часть модального окна, содержащая форму для регистрации -->
+      <div class="modal-body">
+        <!-- Форма для регистрации -->
+  	<form action="/" method="post" role="form" class="form-horizontal">
+	  <!-- Блок для ввода имени -->
+	  <div class="form-group has-feedback">
+	    <label for="name" class="control-label col-xs-3">Имя:</label>
+	    <div class="col-xs-6">
+	      <div class="input-group">
+	        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	        <input type="text" class="form-control" required="required" name="contact[name]" pattern="[A-Za-z]{12,}">
+	      </div>
+	      <span class="glyphicon form-control-feedback"></span>
+	    </div>
+	  </div>
+    <!-- Блок для ввода телефона -->
+    <div class="form-group has-feedback">
+	    <label for="phone" class="control-label col-xs-3">Телефон:</label>
+	    <div class="col-xs-6">
+	      <div class="input-group">
+	        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+	        <input type="text" class="form-control" required="required" name="contact[phone]">
+	      </div>
+	      <span class="glyphicon form-control-feedback"></span>
+	    </div>
+	  </div>
+
+	  <!-- Блок для ввода email -->
+	  <div class="form-group has-feedback">
+	    <label for="email" class="control-label col-xs-3">Email:</label>
+	    <div class="col-xs-6">
+	      <div class="input-group">
+	        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+	        <input type="email" class="form-control" required="required" name="contact[email]">
+	      </div>
+	      <span class="glyphicon form-control-feedback"></span>
+	    </div>
+	  </div>
+          <!-- Конец блока для ввода email-->
+     <textarea class="form-control" placeholder="Сообщение" rows="6" name="contact[message]"></textarea>
+    <!-- <input id="save" type="submit" value="Отослать" class="my_btn btn_md btn-block"> -->
+    </form>
+      </div>
+      <!-- Нижняя часть модального окна -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+        <button id="save" type="submit" class="btn btn-primary">Отправить</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
