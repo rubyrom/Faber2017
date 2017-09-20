@@ -1,9 +1,9 @@
 class ContactsController < ApplicationController
 
-  layout "comments"
+  layout "contacts"
   skip_before_action  :verify_authenticity_token
 
-  before_action :authenticate_user!
+  before_filter :authenticate_user!, except => [:create]
 
   def new
   end
