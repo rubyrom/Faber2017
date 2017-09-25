@@ -2,33 +2,33 @@ $(function() {
   //push button with id="save"
   $('#save').click(function() {
     var formValid = true;
-    //перебрать все элементы управления input
+    //finde all elements input
     $('input').each(function() {
-    //найти предков, которые имеют класс .form-group, для установления success/error
+    //finde parents, which have class .form-group, for setting success/error
     var formGroup = $(this).parents('.form-group');
-    //найти glyphicon, который предназначен для показа иконки успеха или ошибки
+    //finde glyphicon, wich is showing success or error
     var glyphicon = formGroup.find('.form-control-feedback');
-    //для валидации данных используем HTML5 функцию checkValidity
+    //or validatin use HTML5 function checkValidity
     if (this.checkValidity()) {
-      //добавить к formGroup класс .has-success, удалить has-error
+      //add to formGroup class .has-success, delete has-error
       formGroup.addClass('has-success').removeClass('has-error');
-      //добавить к glyphicon класс glyphicon-ok, удалить glyphicon-remove
+      //add to glyphicon class glyphicon-ok, delete glyphicon-remove
       glyphicon.addClass('glyphicon-ok').removeClass('glyphicon-remove');
     } else {
-      //добавить к formGroup класс .has-error, удалить .has-success
+      //add to formGroup csass .has-error, delete .has-success
       formGroup.addClass('has-error').removeClass('has-success');
-      //добавить к glyphicon класс glyphicon-remove, удалить glyphicon-ok
+      //add to glyphicon class glyphicon-remove, delete glyphicon-ok
       glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
       formValid = false;
     }
   });
-  //если форма валидна, то
+  //if form is valid
   if (formValid) {
-    //сркыть модальное окно
+    //hide modal window
     $('#dlModal').modal('hide');
-    //отобразить сообщение об успехе
+    //show success alert
     $('#success-alert').removeClass('hidden');
-
+    //send post request
     $('#submit_form').submit();
   }
 });
