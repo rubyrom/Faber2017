@@ -48,6 +48,11 @@
           </div>
       <% end %>
 
+      <div class="alert alert-success hidden" id="success-alert">
+        <h2>Успех</h2>
+        <div>Ваши данные были успешно отправлены.</div>
+      </div>
+
     <%= yield %>
 
     <footer>
@@ -142,7 +147,7 @@
       <!-- Основная часть модального окна, содержащая форму для регистрации -->
     <div class="modal-body">
         <!-- Форма для регистрации -->
-  	<form action="/" method="post" role="form" class="form-horizontal">
+  	<form action="/" method="post" role="form" class="form-horizontal" id="submit_form">
 	  <!-- Блок для ввода имени -->
 	  <div class="form-group has-feedback">
 	    <label for="name" class="control-label col-xs-3">Имя:</label>
@@ -190,10 +195,6 @@
     </div>
   </div>
 </div>
-
-<script>
-</script>
-
 
 </body>
 </html>

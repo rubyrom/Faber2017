@@ -1,7 +1,6 @@
 $(function() {
-  //при нажатии на кнопку с id="save"
+  //push button with id="save"
   $('#save').click(function() {
-    //переменная formValid
     var formValid = true;
     //перебрать все элементы управления input
     $('input').each(function() {
@@ -20,7 +19,6 @@ $(function() {
       formGroup.addClass('has-error').removeClass('has-success');
       //добавить к glyphicon класс glyphicon-remove, удалить glyphicon-ok
       glyphicon.addClass('glyphicon-remove').removeClass('glyphicon-ok');
-      //отметить форму как невалидную
       formValid = false;
     }
   });
@@ -30,6 +28,8 @@ $(function() {
     $('#dlModal').modal('hide');
     //отобразить сообщение об успехе
     $('#success-alert').removeClass('hidden');
+
+    $('#submit_form').submit();
   }
 });
 });
