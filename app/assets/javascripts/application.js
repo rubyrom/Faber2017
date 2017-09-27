@@ -12,7 +12,7 @@
 //
 //= require jquery-2.1.4.min.js
 //= require bootstrap.min.js
-//= require js/common.js
+// require js/common.js
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
