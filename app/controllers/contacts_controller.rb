@@ -16,6 +16,8 @@ class ContactsController < ApplicationController
     else
       @message="Заполните все строки формы!"
     end
+
+    redirect_back(fallback_location: "main")
   #  render action: 'about'
 
   end
